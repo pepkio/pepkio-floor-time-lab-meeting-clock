@@ -1,0 +1,40 @@
+[project]
+name = "pepkio-floor-time-lab-meeting-clock"
+version = "0.1.0"
+description = "Python client for Pepkio floor-time-lab-meeting-clock tool"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.4.2",
+    "httpx>=0.28.1",
+    "pydantic>=2.13.4",
+]
+
+[project.scripts]
+pepkio-floor-time-lab-meeting-clock = "pepkio_floor_time_lab_meeting_clock.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pepkio_floor_time_lab_meeting_clock"]
+
+[dependency-groups]
+dev = [
+    "hatchling>=1.32.0",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "python-dotenv>=1.2.3",
+    "ruff>=0.16.3",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
