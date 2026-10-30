@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """HTTP client for the Pepkio floor-time-lab-meeting-clock tool."""
 
 from __future__ import annotations

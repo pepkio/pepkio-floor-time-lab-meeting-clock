@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Python client for Pepkio floor-time-lab-meeting-clock."""
 
 from .client import PepkioClient

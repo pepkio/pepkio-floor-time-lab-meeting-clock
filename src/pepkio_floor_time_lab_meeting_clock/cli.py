@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Command-line interface for pepkio-floor-time-lab-meeting-clock."""
 
 from __future__ import annotations
